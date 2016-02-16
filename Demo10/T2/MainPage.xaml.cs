@@ -1,5 +1,15 @@
-﻿using System;
+﻿/*
+ * Copyright (C) Kimmo Oinonen
+ *
+ * This file is part of homework project in Object-Oriented
+ * and GUI Programming class in JAMK.
+ *
+ * Created: 15.2.2016
+ * Author: Kimmo Oinonen
+ */
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -32,6 +42,13 @@ namespace T2
                 = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             // window size
             ApplicationView.PreferredLaunchViewSize = new Size(800, 600);
+        }
+
+        private void loginButton_Click(System.Object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine("User is: " + loginTextBox.Text);
+            string pass = passwordBox.Password;
+            Debug.WriteLine("Password is: " + pass);
         }
     }
 }

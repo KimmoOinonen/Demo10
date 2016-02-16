@@ -9,12 +9,32 @@
     Width="800" Height="600"
     >
 
+    <!--
+    * Copyright (C) Kimmo Oinonen
+    *
+    * This file is part of homework project in Object-Oriented
+    * and GUI Programming class in JAMK.
+    *
+    * Created: 15.2.2016
+    * Author: Kimmo Oinonen 
+    -->
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid Background="LightBlue">
+        <Grid Background="LightBlue" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="50"/>
-                <ColumnDefinition Width="100"/>
-            </Grid.ColumnDefinitions> 
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Login:" Margin="5"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Password:" Margin="5"/>
+            <TextBox x:Name="loginTextBox" Width="200"  Grid.Row="0" Grid.Column="1" Margin="5"/>
+            <PasswordBox x:Name="passwordBox" Width="200"  Grid.Row="1" Grid.Column="1" Margin="5"/>
+            <Button x:Name="loginButton" Content="Login" Grid.Row="2" Grid.Column="1" Margin="5" Click="loginButton_Click"/>
         </Grid>
     </Grid>
 </Page>
